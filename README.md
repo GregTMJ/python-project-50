@@ -5,7 +5,7 @@
 ## Getting Started
 
 #### Clone the current repository via command:
-```git clone https://github.com/GregTMJ/python-project-49.git```
+```git clone https://github.com/GregTMJ/python-project-50.git```
 
 #### Check your pip version with the following command:
 ```python -m pip --version```
