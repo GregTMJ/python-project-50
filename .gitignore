@@ -1,0 +1,10 @@
+.idea/
+.venv/
+.vscode
+__pycache__
+dist/
+.coverage
+coverage.xml
+.pytest_cache/
+.vim
+.DS_Store
