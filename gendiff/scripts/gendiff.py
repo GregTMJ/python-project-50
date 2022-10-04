@@ -1,7 +1,9 @@
 import argparse
 
+from gendiff.scripts.generate_diff import generate_diff
 
-def main() -> None:
+
+def gendiff() -> None:
     """
     function to get input args to start the game
     """
@@ -15,7 +17,5 @@ def main() -> None:
             '--format',
             help='set format of output')
     args = parser.parse_args()
-
-
-if __name__ == '__main__':
-    main()
+    diff = generate_diff(args.first_file, args.second_file)
+    print(diff)

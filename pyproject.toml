@@ -10,7 +10,7 @@ packages = [{include = "gendiff"}]
 python = "^3.7"
 
 [tool.poetry.scripts]
-gendiff = "gendiff.scripts.gendiff:main"
+gendiff = "gendiff.main:main"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"

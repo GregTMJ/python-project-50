@@ -14,4 +14,4 @@ gendiff:
 	poetry run gendiff
 
 lint:
-	poetry run flake8 hexlet_code
+	poetry run flake8 gendiff
