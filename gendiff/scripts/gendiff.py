@@ -15,7 +15,6 @@ def main() -> None:
             '--format',
             help='set format of output')
     args = parser.parse_args()
-    print(args)
 
 
 if __name__ == '__main__':
