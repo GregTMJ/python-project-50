@@ -4,6 +4,7 @@
 __pycache__
 dist/
 .coverage
+codecov
 coverage.xml
 .pytest_cache/
 .vim
