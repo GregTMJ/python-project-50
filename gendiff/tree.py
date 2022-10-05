@@ -1,5 +1,5 @@
 """
-Script that tranforms the 2 dicts into a tree
+Script that transforms the 2 dicts into a tree
 """
 
 def build(old_node: dict, new_node: dict) -> list:
@@ -20,9 +20,9 @@ def build(old_node: dict, new_node: dict) -> list:
                 "key": key,
                 "type": "added",
                 "value": new_node[key]
-                }]
-        elif isinstance(old_node[key], dict)\
-         and isinstance(new_node[key], dict):
+                })
+        elif isinstance(old_node[key], dict) \
+                and isinstance(new_node[key], dict):
              result.append({
                  "key": key,
                  "type": "nested",
@@ -41,6 +41,7 @@ def build(old_node: dict, new_node: dict) -> list:
                 "type": "unchanged",
                 "value": old_node[key]
                 })
+    return result
 
 
 def make_tree(node1: dict, node2: dict) -> dict:
