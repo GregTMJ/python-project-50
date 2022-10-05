@@ -25,14 +25,14 @@ def test_reformate():
                     'type': 'root'}
     reformatted_sample: str = reformate(sample)
     assert reformatted_sample == """{
-                                      - date_of_birth: 14-06-1996
-                                        name: Greg
-                                        person_data: {
-                                            age: 26
-                                          - height: 183
-                                          + height: 178
-                                          + weight: 85
-                                        }
-                                      - surname: Saliba
-                                      + surname: Alexandrov
-                                    }"""
+  - date_of_birth: 14-06-1996
+    name: Greg
+    person_data: {
+        age: 26
+      - height: 183
+      + height: 178
+      + weight: 85
+    }
+  - surname: Saliba
+  + surname: Alexandrov
+}"""
