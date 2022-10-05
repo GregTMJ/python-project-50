@@ -25,7 +25,6 @@ def test_tree_maker():
         }
     }
     func_result = make_tree(sample_1, sample_2)
-    print(func_result)
     assert func_result == {'children': [{'key': 'date_of_birth',
                                          'type': 'deleted',
                                          'value': '14-06-1996'},
