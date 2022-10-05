@@ -7,6 +7,11 @@
 #### Clone the current repository via command:
 ```git clone https://github.com/GregTMJ/python-project-50.git```
 
+## Requirements
+* python >= 3.7
+* Poetry >= 1.14
+* make >= 4
+
 #### Check your pip version with the following command:
 ```python -m pip --version```
 
@@ -29,7 +34,7 @@
 #### test your application with the following command```gendiff -h```
 ##### also don't forget to check the tests inside the folder tests, check if everything works with the command: 
 ```poetry run pytest```
-
+    
 ## Animated tests
 #### Basic usage
 [![asciicast](https://asciinema.org/a/525539.svg)](https://asciinema.org/a/525539)
