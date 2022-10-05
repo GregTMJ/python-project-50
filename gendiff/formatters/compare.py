@@ -1,6 +1,6 @@
 """
 Reformats the tree to get the differences by adding '+'
-'-' or nothing in the begining.
+'-' or nothing in the beginning.
 """
 
 
@@ -32,7 +32,7 @@ def stringify(data, depth) -> str:
 
 def reformate(tree: dict) -> str:
     """
-    reformating the tree to get the differences
+    reformatting the tree to get the differences
     :return: string that displays differences
     """
     return node_reformate(tree)
@@ -41,7 +41,7 @@ def reformate(tree: dict) -> str:
 def node_reformate(node, depth=0) -> str:
     """
     starts comparing children inside the root nodes
-    :return: string of comparisions
+    :return: string of comparisons
     """
     children = node.get('children')
     indent = build_indent(depth)
@@ -55,9 +55,9 @@ def node_reformate(node, depth=0) -> str:
         return f"{indent}- {node['key']}: {node['value']}"
     elif node['type'] == 'changed':
         results: list = [
-                f"{indent}- {node['key']}: {node['value1']}",
-                f"{indent}+ {node['key']}: {node['value2']}"
-                ]
+            f"{indent}- {node['key']}: {node['value1']}",
+            f"{indent}+ {node['key']}: {node['value2']}"
+        ]
         return '\n'.join(results)
     elif node['type'] == 'unchanged':
         return f"{indent}  {node['key']}: {node['value']}"
@@ -67,4 +67,3 @@ def node_reformate(node, depth=0) -> str:
         return f"{indent}  {node['key']}: {{\n{result}\n{indent}  }}"
     else:
         raise Exception(f"Unknown type: {node['type']}")
-
