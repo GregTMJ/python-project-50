@@ -20,5 +20,3 @@ def parse(data, extension: str) -> dict:
     else:
         raise Exception(f'This format {extension} is unknown to the program')
 
-
-print(parse(open('../fixtures/file1.json', 'r'), 'json'))

@@ -19,7 +19,7 @@ def test_diff():
         }
         setting6: {
             doge: {
-              - wow:
+              - wow: 
               + wow: so much
             }
             key: value
