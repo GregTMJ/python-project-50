@@ -26,8 +26,9 @@
 ```make publish``` It will let us execute the publish command knowing exactly what is going into the build. \
 ```make package-install``` installs the built package from our OS, so we can start using simple shell commands.
 
-#### test your application by adding ```gendiff -h``` to the command line
-###
+#### test your application with the following command```gendiff -h```
+##### also don't forget to check the tests inside the folder tests, check if everything works with the command: 
+```poetry run pytest```
 
 ## Animated tests
 #### Basic usage
