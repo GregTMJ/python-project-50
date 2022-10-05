@@ -5,7 +5,7 @@ from gendiff.generate_diff import generate_diff
 
 
 def test_diff():
-    result: str = generate_diff('../fixtures/file1.json', '../fixtures/file2.json')
+    result: str = generate_diff('fixtures/file1.json', 'fixtures/file2.json')
     assert result == """{
     common: {
       + follow: false
@@ -19,7 +19,7 @@ def test_diff():
         }
         setting6: {
             doge: {
-              - wow: 
+              - wow:
               + wow: so much
             }
             key: value
