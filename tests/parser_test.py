@@ -5,8 +5,8 @@ from gendiff.parse import parse
 
 
 def test_parser():
-    json_data: dict = parse(open('fixtures/file1.json', 'r'), 'json')
-    yaml_data: dict = parse(open('fixtures/file1.yaml', 'r'), 'yaml')
+    json_data: dict = parse(open('fixtures/file3.json', 'r'), 'json')
+    yaml_data: dict = parse(open('fixtures/file2.yaml', 'r'), 'yaml')
     data_type = type(json_data)
     assert json_data == {'host': 'hexlet.io', 'timeout': 50,
                          'proxy': '123.234.53.22', 'follow': False}
