@@ -50,17 +50,22 @@ def node_reformate(node, depth=0) -> str:
         result = '\n'.join(lines)
         return f'{{\n{result}\n}}'
     elif node['type'] == 'added':
-        return f"{indent}+ {node['key']}: {node['value']}"
+        return f"{indent}+ {node['key']}:" \
+               f" {stringify(node.get('value'), depth)}"
     elif node['type'] == 'deleted':
-        return f"{indent}- {node['key']}: {node['value']}"
+        return f"{indent}- {node['key']}:" \
+               f" {stringify(node.get('value'), depth)}"
     elif node['type'] == 'changed':
         results: list = [
-            f"{indent}- {node['key']}: {node['value1']}",
-            f"{indent}+ {node['key']}: {node['value2']}"
+            f"{indent}- {node['key']}:"
+            f" {stringify(node.get('value1'), depth)}",
+            f"{indent}+ {node['key']}:"
+            f" {stringify(node.get('value2'), depth)}"
         ]
         return '\n'.join(results)
     elif node['type'] == 'unchanged':
-        return f"{indent}  {node['key']}: {node['value']}"
+        return f"{indent}  {node['key']}:" \
+               f" {stringify(node.get('value'),depth)}"
     elif node['type'] == 'nested':
         lines = map(lambda child: node_reformate(child, depth + 1), children)
         result = '\n'.join(lines)
