@@ -30,4 +30,3 @@ jobs:
         uses: paambaati/codeclimate-action@v2.7.4
         with:
           coverageCommand: make test-coverage
-          debug: true
