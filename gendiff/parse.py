@@ -19,4 +19,3 @@ def parse(data, extension: str) -> dict:
         return yaml.safe_load(data)
     else:
         raise Exception(f'This format {extension} is unknown to the program')
-
