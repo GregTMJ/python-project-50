@@ -22,5 +22,5 @@ def test_parser():
                             {'baz': 'bars', 'foo': 'bar', 'nest': 'str'},
                          'group3':
                             {'deep': {'id': {'number': 45}},
-                                'fee':100500}}
+                                'fee': 100500}}
     assert data_type == dict

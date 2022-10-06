@@ -1,7 +1,7 @@
 import json
 
 
-def reformate_tree(tree: dict):
+def reformate(tree: dict):
     """
     Reformates in json formate
     """

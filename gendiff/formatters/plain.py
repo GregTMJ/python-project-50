@@ -19,7 +19,7 @@ def node_reformate(node, ancestry: str = ''):
     children = node.get('children')
     property_name = f"{ancestry}{node.get('key')}"
     if node['type'] == 'root':
-        nodes = map(lambda child: node_reformate(child, f"{property_name}."),
+        nodes = map(lambda child: node_reformate(child),
                     children)
         nodes_result = sum(nodes, [])
         return '\n'.join(nodes_result)

@@ -1,12 +1,9 @@
 """
 Comparing 2 files json and yaml to see if the scrips works
 """
-from gendiff.generate_diff import generate_diff
+from gendiff.diff import generate_diff
 
-
-def test_diff():
-    result: str = generate_diff('fixtures/file1.json', 'fixtures/file2.json')
-    assert result == """{
+SAMPLE_RESULT: str = """{
     common: {
       + follow: false
         setting1: Value 1
@@ -50,3 +47,27 @@ def test_diff():
         fee: 100500
     }
 }"""
+
+
+def test_diff_json():
+    """
+    Testing the difference between 2 json files
+    """
+    result: str = generate_diff('../fixtures/file1.json', '../fixtures/file2.json')
+    assert result == SAMPLE_RESULT
+
+
+def test_diff_yaml():
+    """
+    testing the difference between 2 yaml files
+    """
+    result: str = generate_diff('fixtures/file1.yaml', 'fixtures/file2.yaml')
+    assert result == SAMPLE_RESULT
+
+
+def test_diff_yaml_json():
+    """
+    testing the difference between yaml and json files
+    """
+    result: str = generate_diff('fixtures/file1.json', 'fixtures/file2.yaml')
+    assert result == SAMPLE_RESULT
