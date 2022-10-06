@@ -53,7 +53,7 @@ def test_diff_json():
     """
     Testing the difference between 2 json files
     """
-    result: str = generate_diff('../fixtures/file1.json', '../fixtures/file2.json')
+    result: str = generate_diff('fixtures/file1.json', 'fixtures/file2.json')
     assert result == SAMPLE_RESULT
 
 
