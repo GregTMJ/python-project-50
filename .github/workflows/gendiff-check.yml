@@ -26,6 +26,6 @@ jobs:
         run: |
           make lint
           make test
-      - name: Test & publish code coverage
+      - name: Test code coverage
         run: |
           make test-coverage
