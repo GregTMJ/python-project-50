@@ -1,6 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/GregTMJ/python-project-50/workflows/hexlet-check/badge.svg)](https://github.com/GregTMJ/python-project-50/actions)
 [![Python CI](https://github.com/GregTMJ/python-project-50/actions/workflows/gendiff-check.yml/badge.svg?branch=main)](https://github.com/Gregtmj/python-project-50/actions/workflows/gendiff-check.yml)
+[![codecov](https://codecov.io/gh/GregTMJ/python-project-50/branch/main/graph/badge.svg?token=E2UPF3CJBJ)](https://codecov.io/gh/GregTMJ/python-project-50)
 
 ## Getting Started
 
@@ -38,3 +39,12 @@
 ## Animated tests
 #### Basic usage
 [![asciicast](https://asciinema.org/a/525539.svg)](https://asciinema.org/a/525539)
+
+#### Generating differences in stylish mode
+[![asciicast](https://asciinema.org/a/525982.svg)](https://asciinema.org/a/525982)
+
+#### Generating differences in plain mode
+[![asciicast](https://asciinema.org/a/525983.svg)](https://asciinema.org/a/525983)
+
+#### Generating differences in json mode
+[![asciicast](https://asciinema.org/a/525984.svg)](https://asciinema.org/a/525984)
