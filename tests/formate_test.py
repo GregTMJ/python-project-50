@@ -6,8 +6,8 @@ from gendiff.tree import make_tree
 from gendiff.formatters import json_formatter, stylish
 from gendiff.formatters import plain
 
-SAMPLE_1 = parse(open('../fixtures/file1.json', 'r'), 'json')
-SAMPLE_2 = parse(open('../fixtures/file2.json', 'r'), 'json')
+SAMPLE_1 = parse(open('fixtures/file1.json', 'r'), 'json')
+SAMPLE_2 = parse(open('fixtures/file2.json', 'r'), 'json')
 TREE_SAMPLE = make_tree(SAMPLE_1, SAMPLE_2)
 SIMPLE_TREE_SAMPLE: dict = {'children': [
     {'key': 'date_of_birth',
