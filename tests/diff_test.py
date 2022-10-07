@@ -17,7 +17,8 @@ def test_diff_json():
     """
     Testing the difference between 2 json files
     """
-    result: str = generate_diff('fixtures/file3.json', 'fixtures/file4.json')
+    result: str = generate_diff('tests/fixtures/file3.json',
+                                'tests/fixtures/file4.json')
     assert result == SAMPLE_RESULT
 
 
@@ -25,7 +26,8 @@ def test_diff_yaml():
     """
     testing the difference between 2 yaml files
     """
-    result: str = generate_diff('fixtures/file3.yaml', 'fixtures/file4.yaml')
+    result: str = generate_diff('tests/fixtures/file3.yaml',
+                                'tests/fixtures/file4.yaml')
     assert result == SAMPLE_RESULT
 
 
@@ -33,7 +35,8 @@ def test_diff_yaml_json():
     """
     testing the difference between yaml and json files
     """
-    result: str = generate_diff('fixtures/file3.json', 'fixtures/file4.yaml')
+    result: str = generate_diff('tests/fixtures/file3.json',
+                                'tests/fixtures/file4.yaml')
     assert result == SAMPLE_RESULT
 
 
@@ -41,8 +44,9 @@ def test_diff_json_plain():
     """
     testing the difference in plain style
     """
-    result: str = generate_diff('fixtures/file1.yaml',
-                                'fixtures/file2.yaml', 'plain')
+    result: str = generate_diff('tests/fixtures/file1.yaml',
+                                'tests/fixtures/file2.yaml',
+                                'plain')
     assert result == """Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null
@@ -60,8 +64,8 @@ def test_diff_json_formate():
     """
     testing the difference in json style
     """
-    result: str = generate_diff('fixtures/file1.json',
-                                'fixtures/file2.json', 'json')
+    result: str = generate_diff('tests/fixtures/file1.json',
+                                'tests/fixtures/file2.json', 'json')
     assert result == """{
   "type": "root",
   "children": [
