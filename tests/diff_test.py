@@ -1,7 +1,7 @@
 """
 Comparing 2 files json and yaml to see if the scrips works
 """
-from gendiff.generate_diff import generate_diff
+from gendiff import generate_diff
 
 SAMPLE_RESULT: str = """{
     common: {
