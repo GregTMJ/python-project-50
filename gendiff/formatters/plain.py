@@ -28,10 +28,10 @@ def node_reformate(node, ancestry: str = ''):
                     children)
         return sum(nodes, [])
     elif node['type'] == 'added':
-        return [f"Property '{property_name}' was added with value: "
+        return [f"Property '{property_name}' was added with value:"
                 f" {stringify(node['value'])}"]
     elif node['type'] == 'deleted':
-        return [f"Property '{property_name}' was deleted"]
+        return [f"Property '{property_name}' was removed"]
     elif node['type'] == 'changed':
         return [
             f"Property '{property_name}' was updated. "
