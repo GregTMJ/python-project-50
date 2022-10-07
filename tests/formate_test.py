@@ -6,8 +6,8 @@ from gendiff.tree import make_tree
 from gendiff.formatters import json_formatter, stylish
 from gendiff.formatters import plain
 
-SAMPLE_1 = parse(open('fixtures/file1.json', 'r'), 'json')
-SAMPLE_2 = parse(open('fixtures/file2.json', 'r'), 'json')
+SAMPLE_1 = parse(open('../fixtures/file1.json', 'r'), 'json')
+SAMPLE_2 = parse(open('../fixtures/file2.json', 'r'), 'json')
 TREE_SAMPLE = make_tree(SAMPLE_1, SAMPLE_2)
 SIMPLE_TREE_SAMPLE: dict = {'children': [
     {'key': 'date_of_birth',
@@ -160,17 +160,17 @@ def test_plain():
     testing the plain formate
     """
     formatter = plain.reformate(TREE_SAMPLE)
-    assert formatter == """Property 'common.follow' was added with value:  false
-Property 'common.setting2' was deleted
+    assert formatter == """Property 'common.follow' was added with value: false
+Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null
-Property 'common.setting4' was added with value:  'blah blah'
-Property 'common.setting5' was added with value:  [complex value]
+Property 'common.setting4' was added with value: 'blah blah'
+Property 'common.setting5' was added with value: [complex value]
 Property 'common.setting6.doge.wow' was updated. From '' to 'so much'
-Property 'common.setting6.ops' was added with value:  'vops'
+Property 'common.setting6.ops' was added with value: 'vops'
 Property 'group1.baz' was updated. From 'bas' to 'bars'
 Property 'group1.nest' was updated. From [complex value] to 'str'
-Property 'group2' was deleted
-Property 'group3' was added with value:  [complex value]"""
+Property 'group2' was removed
+Property 'group3' was added with value: [complex value]"""
 
 
 def test_stylish():

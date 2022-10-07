@@ -4,48 +4,12 @@ Comparing 2 files json and yaml to see if the scrips works
 from gendiff import generate_diff
 
 SAMPLE_RESULT: str = """{
-    common: {
-      + follow: false
-        setting1: Value 1
-      - setting2: 200
-      - setting3: true
-      + setting3: null
-      + setting4: blah blah
-      + setting5: {
-            key5: value5
-        }
-        setting6: {
-            doge: {
-              - wow: 
-              + wow: so much
-            }
-            key: value
-          + ops: vops
-        }
-    }
-    group1: {
-      - baz: bas
-      + baz: bars
-        foo: bar
-      - nest: {
-            key: value
-        }
-      + nest: str
-    }
-  - group2: {
-        abc: 12345
-        deep: {
-            id: 45
-        }
-    }
-  + group3: {
-        deep: {
-            id: {
-                number: 45
-            }
-        }
-        fee: 100500
-    }
+  - follow: false
+    host: hexlet.io
+  - proxy: 123.234.53.22
+  - timeout: 50
+  + timeout: 20
+  + verbose: true
 }"""
 
 
@@ -53,7 +17,7 @@ def test_diff_json():
     """
     Testing the difference between 2 json files
     """
-    result: str = generate_diff('fixtures/file1.json', 'fixtures/file2.json')
+    result: str = generate_diff('fixtures/file3.json', 'fixtures/file4.json')
     assert result == SAMPLE_RESULT
 
 
@@ -61,7 +25,7 @@ def test_diff_yaml():
     """
     testing the difference between 2 yaml files
     """
-    result: str = generate_diff('fixtures/file1.yaml', 'fixtures/file2.yaml')
+    result: str = generate_diff('fixtures/file3.yaml', 'fixtures/file4.yaml')
     assert result == SAMPLE_RESULT
 
 
@@ -69,7 +33,7 @@ def test_diff_yaml_json():
     """
     testing the difference between yaml and json files
     """
-    result: str = generate_diff('fixtures/file1.json', 'fixtures/file2.yaml')
+    result: str = generate_diff('fixtures/file3.json', 'fixtures/file4.yaml')
     assert result == SAMPLE_RESULT
 
 
@@ -77,8 +41,8 @@ def test_diff_json_plain():
     """
     testing the difference in plain style
     """
-    result: str = generate_diff('fixtures/file1.json',
-                                'fixtures/file2.json', 'plain')
+    result: str = generate_diff('fixtures/file1.yaml',
+                                'fixtures/file2.yaml', 'plain')
     assert result == """Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null

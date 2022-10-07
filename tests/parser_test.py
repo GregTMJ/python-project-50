@@ -18,9 +18,8 @@ def test_parser():
                                     'setting6': {'doge': {'wow': 'so much'},
                                                  'key': 'value',
                                                  'ops': 'vops'}},
-                         'group1':
-                            {'baz': 'bars', 'foo': 'bar', 'nest': 'str'},
-                         'group3':
-                            {'deep': {'id': {'number': 45}},
-                                'fee': 100500}}
+                         'group1': {'baz': 'bars', 'foo': 'bar',
+                                    'nest': 'str'},
+                         'group3': {'deep': {'id': {'number': 45}},
+                                    'fee': 100500}}
     assert data_type == dict
