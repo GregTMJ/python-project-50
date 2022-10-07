@@ -1,7 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/GregTMJ/python-project-50/workflows/hexlet-check/badge.svg)](https://github.com/GregTMJ/python-project-50/actions)
 [![Python CI](https://github.com/GregTMJ/python-project-50/actions/workflows/gendiff-check.yml/badge.svg?branch=main)](https://github.com/Gregtmj/python-project-50/actions/workflows/gendiff-check.yml)
-[![codecov](https://codecov.io/gh/GregTMJ/python-project-50/branch/main/graph/badge.svg?token=E2UPF3CJBJ)](https://codecov.io/gh/GregTMJ/python-project-50)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ef9e0ec11fccc91f442c/maintainability)](https://codeclimate.com/github/GregTMJ/python-project-50/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ef9e0ec11fccc91f442c/test_coverage)](https://codeclimate.com/github/GregTMJ/python-project-50/test_coverage)
 
 ## Getting Started
 
